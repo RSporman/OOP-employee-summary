@@ -1,7 +1,7 @@
 // TODO: Write code to define and export the Employee class
 
 
-const Employee = require('./Employee'); 
+// const Employee = require('./Employee'); 
 
 class Employee {
     constructor(name, id, email) {
