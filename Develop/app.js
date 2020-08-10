@@ -19,9 +19,9 @@ const render = require("./lib/htmlRenderer");
 
 const teamMembers = []
 
-function createTeam() {
+function generateTeamHtml() {
 
-    inquirer
+   return inquirer
         .prompt([
 
             {
@@ -41,15 +41,15 @@ function createTeam() {
             switch (userChoice.memberChoice) {
                 // in case userChoice
                 case "Manager":
-                    addManager();
+                    return addManager();
                     break;
 
                 case "Engineer":
-                    addEngineer();
+                  return addEngineer();
                     break;
 
                 case "Intern":
-                    addIntern();
+                   return addIntern();
                     break;
 
                 case "No more employees":
@@ -62,7 +62,7 @@ function createTeam() {
 
     function addManager() {
 
-        inquirer
+      return  inquirer
             .prompt([
 
                 {
@@ -96,7 +96,7 @@ function createTeam() {
 
                 teamMembers.push(manager)
 
-                createTeam();
+                return generateTeamHtml();
 
             })
 
@@ -105,7 +105,7 @@ function createTeam() {
 
 
     function addEngineer() {
-        inquirer
+      return inquirer
             .prompt([
 
                 {
@@ -138,7 +138,7 @@ function createTeam() {
 
                 teamMembers.push(engineer)
 
-                createTeam();
+                return generateTeamHtml();
 
             })
     }
@@ -148,7 +148,7 @@ function createTeam() {
 
     function addIntern() {
 
-        inquirer
+        return inquirer
             .prompt([
 
                 {
@@ -181,14 +181,25 @@ function createTeam() {
 
                 teamMembers.push(intern)
 
-                createTeam();
+                return generateTeamHtml();
             })
     }
 }
 
+generateTeamHtml()
+.then(() => {
+  let html = render(teamMembers);
+  fs.writeFile("./output/team.html", html, 'utf8', () => {
+    console.log("Finished")
+  });
+   
+})
+
 module.exports = teamMembers
 
-createTeam();
+// createTeam();
+
+
 
 
 
