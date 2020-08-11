@@ -22,9 +22,9 @@ In addition to `Employee`'s properties and methods, `Manager` will also have:
 
 In addition to `Employee`'s properties and methods, `Engineer` will also have:
 
-  * github  // GitHub username
+  * github 
 
-  * getGithub()
+
 
 In addition to `Employee`'s properties and methods, `Intern` will also have:
 
