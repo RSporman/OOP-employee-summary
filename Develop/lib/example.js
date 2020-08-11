@@ -1,19 +1,4 @@
 const inquirer = require('inquirer');
-// const arr = [12,4,3];
-// arr.push(3);
-//Question object should have keys for message, type, name
-// const simpleInput = {
-//     message: "what is simple?",
-//     type: "input",
-//     name: "simple"
-// }
-
-// const checkBoxInput = {
-//     message: "what do you want?",
-//     type: "checkbox",
-//     name: "check",
-//     choices: ["computer", "knowledge", "server"]
-// }
 
 class Question {
     constructor(message, type, name) {

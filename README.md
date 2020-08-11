@@ -31,5 +31,10 @@ In addition to `Employee`'s properties and methods, `Intern` will also have:
   * school 
 
 
+(https://drive.google.com/file/d/1OrBeGz1bppVQ93fOxX3oEb9v4Rth1Akz/view)
+(https://github.com/RSporman/OOP-employee-summary)
+![Employee Summary](./Assets/myteam.png)
+
+
 
 
